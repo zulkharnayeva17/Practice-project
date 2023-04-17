@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<head>
+
+  <title>KFC</title>
+    <link rel="icon" type="image/x-icon" href="https://yt3.ggpht.com/a/AATXAJyNvjy73xLBOG8ooBqH-3-rHoTmSY-m13cezQ=s900-c-k-c0xffffffff-no-rj-mo">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="# ">KFC</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{ url_for('home') }}">HOME</a></li>
+        <li><a href="{{ url_for('menu') }}">MENU</a></li>
+        <li><a href="{{ url_for('login') }}">MY ACC</a></li>
+
+          
+
+      </ul>
+    </div>
+  </div>
+</nav>
+</head>
+
+<img src="https://sun9-57.userapi.com/impf/WQ179k2J57e5XgeU6Ewgc2kUEpbnX7MlRYN4Bg/5sTrcNeistg.jpg?size=1280x720&quality=95&sign=8cbc2160331a5a06dd052bf39745d5d3&c_uniq_tag=TTuHbohO_JAkqJngq3KWT6FRHI7KcDFm7UQ0fuqEIUc&type=album" alt="login" width="1500" height="500" >
+<body>
+
+  <div class="login-box" >
+  <div class="login-body">
+    <p>Please enter your username and password to login to your account</p>
+    <form class="form-group" action="{{ url_for('login') }}" method="post">
+        <label>Username</label>
+        <input type="text" class="form-control" name="username" placeholder="Username" id="username" required>
+        <label>Password</label>
+        <input type="password" class="form-control" name="password" placeholder="Password" id="password" required>
+        <input type="checkbox" value="checked"><b>Remember</b>
+        <input type="submit" value="Login" class="form-control btn btn-success " name="">
+    </form>
+    {% with messages = get_flashed_messages()  %}
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">×</span>
+      </button>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <p>If you don't have an account, you can easily register <a href="{{ url_for('register') }}">Register</a></p>
+  </div>
+ </div>
+ </body>
+</html>

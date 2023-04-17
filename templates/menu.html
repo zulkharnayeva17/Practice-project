@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<head>
+
+  <title>KFC</title>
+    <link rel="icon" type="image/x-icon" href="https://yt3.ggpht.com/a/AATXAJyNvjy73xLBOG8ooBqH-3-rHoTmSY-m13cezQ=s900-c-k-c0xffffffff-no-rj-mo">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+
+
+</head>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="# ">KFC</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{ url_for('home') }}">HOME</a></li>
+        <li><a href="{{ url_for('menu') }}">MENU</a></li>
+        <li><a href="{{ url_for('register') }}">Registration</a></li>
+        <li><a href="{{ url_for('login') }}">log in</a></li>
+
+
+
+      </ul>
+    </div>
+  </div>
+</nav>
+<body>
+
+
+
+  <div class="container">
+    <div class="menu">
+      <h2 class="menu-group-heading">
+        Our recommendations
+      </h2>
+
+      <div class="menu-group">
+        <div class="menu-item">
+          <img class="menu-item-image" src="https://kfcmenu.info/wp-content/uploads/2021/02/kombo-2-shefburger-dzhunior-335x220.png" alt="Combo2">
+          <div class="menu-item-text">
+            <h3 class="menu-item-heading">
+              <span class="menu-item-name">Combo 2 (Chefburger Junior)</span>
+              <span class="menu-item-price">3200tng</span>
+            </h3>
+            <p class="menu-item-description">
+              Combo 2 (Chefburger Junior) – KFC. Junior chef burger + standard fries + cheese sauce + Pepsi in 0.5 l bottle Weight: 74 gr. Proteins: 3.7 gr. Fat: 17 gr. Carbohydrates: 32 gr. Calories: 296 kcal.
+            </p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img class="menu-item-image" src="https://kfcmenu.info/wp-content/uploads/2021/02/kombo-3-tvister-335x220.png" alt="Combo3">
+          <div class="menu-item-text">
+            <h3 class="menu-item-heading">
+              <span class="menu-item-name">Combo3 (Twister)</span>
+              <span class="menu-item-price">2350tng</span>
+            </h3>
+            <p class="menu-item-description">
+              Combo 3 (Twister) – KFC. Original Twister + Standard Chips + Cheese Dip + Pepsi in a 0.5 liter bottle Weight: 74 gr. Proteins: 3.7 gr. Fat: 17 gr. Carbohydrates: 32 gr. Calories: 296 kcal.
+            </p>
+          </div>
+        </div>
+          <div class="menu-item">
+          <img class="menu-item-image" src="https://kfcmenu.info/wp-content/uploads/2021/02/basket-5-nozhek-335x220.png" alt="5 foot baskets">
+          <div class="menu-item-text">
+            <h3 class="menu-item-heading">
+              <span class="menu-item-name">5 Foot baskets</span>
+              <span class="menu-item-price">3350tng</span>
+            </h3>
+            <p class="menu-item-description">
+              Five-legged baskets – KFC. You never have too many baskets. Get to know what’s new! Baskets 5 Legs, 2 small potatoes. Weight: 139 gr. Proteins: 3 gr. Fat: 3.1 gr. Carbohydrates: 28.
+            </p>
+          </div>
+        </div>
+          <div class="menu-item">
+          <img class="menu-item-image" src="https://kfcmenu.info/wp-content/uploads/2021/02/pati-boks-335x220.png" alt="Patty box">
+          <div class="menu-item-text">
+            <h3 class="menu-item-heading">
+              <span class="menu-item-name">Patty box</span>
+              <span class="menu-item-price">4300tng</span>
+            </h3>
+            <p class="menu-item-description">
+              Bytes, chips and standard sauce – the perfect set for a light snack Weight: 279 gr. Proteins: 23.1 gr. Fats: 12.8 gr. Carbohydrates: 8.1 gr. Calories: 240 kcal.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <div class="sliding-background">
+        </div>
+      </div>
+     <hr>
+
+
+      <p>To order please click here <a href="{{ url_for('products') }}">Order</a></p>
+      <h2 class="menu-group-heading">
+        Baskets
+      </h2>
+      <div class="menu-group">
+        <div class="menu-item">
+          <img class="menu-item-image" src="https://www.kfc.kz/admin/files/medium/medium_4360.jpg" alt="baskets">
+          <div class="menu-item-text">
+            <h3 class="menu-item-heading">
+              <span class="menu-item-name">Baskets wings and strips</span>
+              <span class="menu-item-price">5400tng</span>
+
+
+            </h3>
+            <p class="menu-item-description">
+              Hot Wings + Hot Strips
+            </p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img class="menu-item-image" src="https://www.kfc.kz/admin/files/medium/medium_4315.jpg" alt="Duet">
+          <div class="menu-item-text">
+            <h3 class="menu-item-heading">
+              <span class="menu-item-name">Basket Duet</span>
+              <span class="menu-item-price">4500tng</span>
+            </h3>
+            <p class="menu-item-description">
+              5 foot, 4 hot wings, 5 strips, standard fries
+            </p>
+          </div>
+        </div>
+      </div>
+        <h2 class="menu-group-heading">
+        Boxes
+      </h2>
+         <div class="menu-group">
+        <div class="menu-item">
+          <img class="menu-item-image" src="https://www.kfc.kz/admin/files/medium/medium_4452.png" alt="baskets">
+          <div class="menu-item-text">
+            <h3 class="menu-item-heading">
+              <span class="menu-item-name">Sanders Mega Burger Box</span>
+              <span class="menu-item-price">5400tng</span>
+            </h3>
+            <p class="menu-item-description">
+              Sanders Mega Burger + 2 Strips + Fries + Pepsi 0,5l, Cheese Souse
+            </p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img class="menu-item-image" src="https://www.kfc.kz/admin/files/medium/medium_4315.jpg" alt="Duet">
+
+          <div class="menu-item-text">
+            <h3 class="menu-item-heading">
+              <span class="menu-item-name">Basket Duet</span>
+              <span class="menu-item-price">4500tng</span>
+            </h3>
+            <p class="menu-item-description">
+              5 foot, 4 hot wings, 5 strips, standard fries
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+
+
+
+</html>

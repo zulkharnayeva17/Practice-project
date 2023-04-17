@@ -1,0 +1,318 @@
+
+.wrapper {
+            overflow: hidden;
+        }
+
+        .sliding-background {
+            background: url(
+"https://avatars.mds.yandex.net/i?id=dad894ac3945e4612ed1427077f699c6_l-5345102-images-thumbs&n=13")
+            repeat-x;
+            height: 650px;
+            width: 4000px;
+            animation: slide 60s linear infinite;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translate3d(0, 0, 0);
+            }
+
+            100% {
+                transform: translate3d(-2000px, 0, 0);
+            }
+        }
+
+
+
+
+.container1 {
+  width: 2000px;
+   margin: 0auto;
+  padding: 4em;
+}
+
+.menu {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+
+.menu-group-heading {
+  margin: 0;
+  padding-bottom: 1em;
+  border-bottom: 2px solid #ccc;
+}
+
+.menu-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5em;
+  padding: 1.5em 0;
+}
+
+.menu-item {
+  display: flex;
+}
+
+.menu-item-image {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  object-fit: cover;
+  margin-right: 1.5em;
+}
+
+.menu-item-text {
+  flex-grow: 1;
+}
+
+.menu-item-heading {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.menu-item-name {
+  margin-right: 1.5em;
+  font-family: Georgia, serif;
+  font-size: 20px;
+}
+
+.menu-item-description {
+  line-height: 1.6;
+}
+
+@media screen and (min-width: 992px) {
+  .menu {
+    font-size: 16px;
+  }
+
+  .menu-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu-item-image {
+    width: 125px;
+    height: 125px;
+  }
+}
+
+
+  h3,h4 {
+    margin: 10px 0 30px 0;
+    font-size: 20px;
+
+  }
+  .container {
+    padding: 80px 120px;
+
+  }
+  .person {
+
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+
+
+    width: 100%;
+    margin: auto;
+  }
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail p {
+    margin-top: 15px;
+    color: #555;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+  }
+  .nav-tabs li a {
+    color: #777;
+  }
+  #googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #a61616 !important ;
+
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: red !important;
+  }
+  footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+  }
+  footer a {
+    color: #f5f5f5;
+  }
+  footer a:hover {
+    color: #777;
+    text-decoration: none;
+  }
+  .form-control {
+    border-radius: 0;
+  }
+  textarea {
+    resize: none;
+  }
+
+
+.product{
+background-color: #8f0018}
+
+  .pt-100 {
+                padding-top: 100px;
+            }
+
+            .single-publication {
+                border: 1px solid #f2eee2;
+                margin-bottom: 30px;
+                position: relative;
+                overflow: hidden;
+            }
+
+
+
+            .single-publication .publication-content {
+
+                text-align: center;
+                padding: 20px;
+            }
+
+
+            .single-publication .publication-content .price {
+                font-size: 18px;
+                color: black;
+            }
+            .single-publication .publication-content .price span {
+
+
+                padding-left: 5px;
+                font-weight: 50;
+            }
+            .single-publication .add-to-cart {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: white;
+                opacity: 0;
+                visibility: hidden;
+                text-align: center;
+                -webkit-transform: scale(.7);
+                transform: scale(.7);
+                height: 105px;
+                -moz-transition: .4s;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
+            .single-publication:hover .add-to-cart {
+                visibility: visible;
+                transform: scale(1);
+                -webkit-transform: scale(1);
+                opacity: 1;
+            }
+            .single-publication .add-to-cart .default-btn {
+                margin-top: 28px;
+                padding: 8px 25px;
+                font-size: 14px;
+            }
+
+            .single-publication .add-to-cart .default-btn {
+                margin-top: 28px;
+                padding: 8px 25px;
+                font-size: 14px;
+            }
+            .default-btn {
+                background-color: black;
+                color: #fff;
+                border: 1px solid #ff007d;
+                display: inline-block;
+                padding: 10px 30px;
+                border-radius: 30px;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-family: 'Open Sans', New Times;
+            }
+            .default-btn:hover {
+                color: #fff;
+                text-decoration: none;
+            }
+
+

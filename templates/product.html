@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Menu</title>
+      <link rel="icon" type="image/x-icon" href="https://yt3.ggpht.com/a/AATXAJyNvjy73xLBOG8ooBqH-3-rHoTmSY-m13cezQ=s900-c-k-c0xffffffff-no-rj-mo">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+
+
+
+</head>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="# ">KFC</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{ url_for('home') }}">HOME</a></li>
+        <li><a href="{{ url_for('menu') }}">MENU</a></li>
+        <li><a href="{{ url_for('login') }}">MY ACC</a></li>
+
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<style>
+body{
+background-color: #FFAO7A}
+</style>
+
+
+
+
+
+
+<div class="container">
+
+
+
+
+  {% if 'cart_item' in session %}
+   <p><a id="btnEmpty" href="{{ url_for('.empty_cart') }}" class="btn btn-danger">Empty Cart</a></p>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th class="text-center">Unit Price</th>
+                        <th class="text-center">Price</th>
+                        <th> </th>
+                    </tr>
+                </thead>
+                <tbody>
+    {% for key, val in session['cart_item'].items() %}
+        {% set quantity = session['cart_item'][key]['quantity'] %}
+        {% set price = session['cart_item'][key]['price'] %}
+        {% set item_price = session['cart_item'][key]['total_price'] %}
+                    <tr>
+
+                        <div class="media">
+
+                            <div class="media-body" style="padding-left:10px;">
+                                <h4 class="media-heading"> <a href="#">{{ session['cart_item'][key]['name'] }}</a></h4>
+                                <h5 class="media-heading"> by <a href="#">KFC</a></h5>
+
+                            </div>
+                        </div></td>
+                        <td class="col-sm-1 col-md-1" style="text-align: center">
+                        <input type="email" class="form-control" value="{{ quantity }}">
+                        </td>
+                        <td class="col-sm-1 col-md-1 text-center"><strong>${{ price }} </strong></td>
+                        <td class="col-sm-1 col-md-1 text-center"><strong>${{ item_price }} </strong></td>
+                        <td class="col-sm-1 col-md-1">
+                        <a href="{{ url_for('.delete_product', code=session['cart_item'][key]['code']) }}" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span> Remove
+                        </a></td>
+                    </tr>
+    {% endfor %}
+                    <tr>
+                        <td colspan="4"><h5>Total Quantity</h5></td>
+                        <td class="text-right"><h5><strong>{{ session['all_total_quantity'] }}</strong></h5></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><h3>Total</h3></td>
+                        <td colspan="2" class="text-right"><h3><strong>$ {{ session['all_total_price'] }}</strong></h3></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                        <button type="button" class="btn btn-default">
+                            <span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping
+                        </button></td>
+                        <td>
+                        <button type="button" class="btn btn-success">
+                            Checkout <span class="glyphicon glyphicon-play"></span>
+                        </button></td>
+                    </tr>
+                </tbody>
+            </table>
+  {% else: %}
+
+
+    <div class="no-records">Now Your Cart is Empty</div>
+  {% endif %}
+        </div>
+    </div>
+</div>
+
+<section class="our-publication pt-100 pb-70">
+            <div class="container3">
+
+                <div class="row">
+    {% for product in products %}
+      <form method="post" action="/add">
+                        <div class="single-publication">
+
+                            </figure>
+
+                            <div class="publication-content">
+
+                                <h3><a href="#">{{ product.name }}</a></h3>
+
+                                <h4 class="price">$ {{ product.price }}</h4>
+                            </div>
+
+                            <div class="add-to-cart">
+        <input type="hidden" name="code" value="{{ product.code }}"/>
+        <input type="text" class="product-quantity" name="quantity" value="1" size="2" />
+        <input type="submit" value="Add to Cart" class="default-btn" />
+                            </div>
+                        </div>
+      </form>
+                    </div>
+                {% endfor %}
+
+                </div>
+            </div>
+        </section>
+
+</body>
+</html>
